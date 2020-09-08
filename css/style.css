@@ -1,0 +1,118 @@
+/*----- ResetCSS -----*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*----- Layout -----*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 50px;
+}
+
+.container-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container-wrap div {
+    display: flex;
+}
+
+.btn-thumb,
+.counter {
+    background-color: #fff;
+    width: 450px;
+    height: 150px;
+    border: 3px solid #6b37cb;
+    border-radius:10px;
+}
+
+/*----- Thumbs Up -----*/
+
+.btn-thumb {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.icone img {
+    width: 80px;
+    height: auto;
+}
+
+.thumb-counter {
+    background-color: #6b37cb;
+    width: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Thumbs Up Animation*/
+
+@keyframes hands-up {
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(-20deg) translateY(-10px);
+    }
+    75%, 100% {
+        transform: rotate(0deg);
+    }
+}
+
+/*----- Counter -----*/
+
+.counter div {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter .btn-num {
+    background-color: #6b37cb;
+    color: #fff;
+}
+
+.btn-plus,
+.btn-minus {
+    color: #5b2fac;
+    cursor: pointer;
+}
+
+/*----- Media Query -----*/
+
+@media screen and (max-width: 1040px) {
+    .container {
+        width: 100%;
+    }
+
+    .container-wrap .container {
+        flex-direction: column;
+    }
+
+    .btn-thumb {
+        margin-bottom: 50px;
+    }
+
+    .btn-thumb,
+    .counter {
+        max-width: 80%;
+    }
+}
